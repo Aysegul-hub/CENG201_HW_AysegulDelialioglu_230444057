@@ -4,9 +4,9 @@ public class Task4Test {
 
     public static void main(String[] args) {
 
-        HospitalSystem hpSystem = new HospitalSystem();
+        HospitalSystem hpSystem = new HospitalSystem(); // Created a hospital system.
 
-        hpSystem.addPatient(new Patient(1, "Ayşe", 5, 30));
+        hpSystem.addPatient(new Patient(1, "Ayşe", 5, 30)); // Adding 10 patient with varying severity levels and ages.
         hpSystem.addPatient(new Patient(2, "Emir", 9, 45));
         hpSystem.addPatient(new Patient(3, "Naz", 3, 22));
         hpSystem.addPatient(new Patient(4, "Hakan", 8, 60));
@@ -17,7 +17,7 @@ public class Task4Test {
         hpSystem.addPatient(new Patient(9, "Asya", 10, 50));
         hpSystem.addPatient(new Patient(10, "Burak", 1, 26));
 
-        hpSystem.addTreatmentRequest(new TreatmentRequest(1,false));
+        hpSystem.addTreatmentRequest(new TreatmentRequest(1,false)); // Adding treatment requests with varying priority.
         hpSystem.addTreatmentRequest(new TreatmentRequest(2,true));
         hpSystem.addTreatmentRequest(new TreatmentRequest(3,false));
         hpSystem.addTreatmentRequest(new TreatmentRequest(4,true));
@@ -28,13 +28,13 @@ public class Task4Test {
 
 
 
-        hpSystem.processTreatment();
+        hpSystem.processTreatment(); // Process 3 treatment requests.
         hpSystem.processTreatment();
         hpSystem.processTreatment();
         hpSystem.processTreatment();
 
-        hpSystem.printSystemState();
-        hpSystem.sortPatientsBySeverity();
+        hpSystem.printSystemState(); // Print the current state of the hospital system.
+        hpSystem.sortPatientsBySeverity(); // Sort and print patient by severity level.
 
 
     }
