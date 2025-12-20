@@ -14,10 +14,17 @@ public class Patient {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
     // We use toString method to print the patient details , this way looks more organized.
     @Override //Provide a string representation of the patient object.
     public String toString() {
         return "Patient { " + "id = " + id + " , name = " + name + ",severity = " + severity + ", age = " + age + "}";
 
     }
+
+   
+    
 }

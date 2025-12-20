@@ -75,5 +75,5 @@ public class TreatmentQueue {
     public boolean isEmpty() {
         return front == null;
     }
-    
+
 }

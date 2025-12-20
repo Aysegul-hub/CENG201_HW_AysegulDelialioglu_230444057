@@ -1,7 +1,7 @@
 public class PatientList {
 
-
     // We create a linked list to store the patients. (Node keeps patient data and pointer to next node)
+
     class Node {
         Patient data;
         Node next;
@@ -9,20 +9,19 @@ public class PatientList {
         Node(Patient data) {
             this.data = data;
             
+
         }
     }
 
     //This shows the head is null at the beginning.
 
     Node head;
-   
     // We add patient to the end of the list.
     public void addPatient(Patient p) {
         Node n = new Node(p); // Create a new node with the patient data.
         n.next = head;
         head = n;
     }
-
     // We remove patient by ID.
     public void removePatientById( int id) {
         if(head == null) {
@@ -35,10 +34,10 @@ public class PatientList {
         }
 
         Node cur = head;
-        while ( cur.next != null) {
+        while ( cur.next != null ) {
             if ( cur.next.data.id == id) {
-            cur.next = cur.next.next; 
-            return;
+                cur.next = cur.next.next;
+                return;
             }
             cur = cur.next;
         }
@@ -46,16 +45,18 @@ public class PatientList {
     public void removePatient(int id) {
         removePatientById(id);
     }
-    
+
+    //We find patient using ID.
     public Patient findPatientList(int id) {
-        Node cur = head ;
-        while ( cur!= null) {
-            if ( cur.data.id == id){
-                return cur.data;
+        Node cur = head; // Start from the head node.
+
+        while ( cur != null) {
+            if ( cur.data.id == id) {
+                return cur.data; // Return the patient if found.
             }
-            cur = cur.next;
+            cur = cur.next; // Move the next node.
         }
-        return null;
+        return null; // Return null if the patient is not found in the list.
     }
 
     public void printList() {
@@ -66,18 +67,20 @@ public class PatientList {
         }
     }
     
-
     public Patient[] toArray() {
         int count = 0;
         Node cur = head;
-        while (cur != null) {
+
+        while ( cur != null) {
             count++;
             cur = cur.next;
         }
+
         Patient[] arr = new Patient[count];
         cur = head;
         int i = 0;
-        while ( cur != null) {
+
+        while (cur != null) {
             arr[i++] = cur.data;
             cur = cur.next;
         }

@@ -1,4 +1,4 @@
-package HW1_Task3;
+
 
 public class Task3Test {  // We should access fastly the last discharge patient so we use stack.
     public static void main(String[] args) {
