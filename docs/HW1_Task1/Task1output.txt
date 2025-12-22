@@ -1,0 +1,15 @@
+Patient list after adding patients: 
+Patient { id = 5 , name = Hakan Çavuş,severity = 9, age = 60}
+Patient { id = 4 , name = Mehtap Ece Şafak,severity = 6, age = 45}
+Patient { id = 3 , name = Tahir Aslan,severity = 3, age = 25}
+Patient { id = 2 , name = Leyla Parlak,severity = 8, age = 18}
+Patient { id = 1 , name = Ali Murat Budak,severity = 5, age = 30}
+
+After removing patient using by ID 3 :
+Patient { id = 5 , name = Hakan Çavuş,severity = 9, age = 60}
+Patient { id = 4 , name = Mehtap Ece Şafak,severity = 6, age = 45}
+Patient { id = 2 , name = Leyla Parlak,severity = 8, age = 18}
+Patient { id = 1 , name = Ali Murat Budak,severity = 5, age = 30}
+
+Searching for patient with ID 4:
+Patient { id = 4 , name = Mehtap Ece Şafak,severity = 6, age = 45}

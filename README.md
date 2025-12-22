@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 HOSPITAL MANAGEMENT SYSTEM for CENG201 HOMEWORK (27 December 2025)
 
@@ -31,4 +30,7 @@ FEATURES IMPLEMENTED:
 • Process treatment requests (priority and normal). 
 • Sort patients by severity.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae4b0d9dcc2830b973b92b0f2ddfcd1a8212c68c
