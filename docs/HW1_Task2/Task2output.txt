@@ -1,0 +1,16 @@
+Initial queue: 
+TreatmentRequest{patientId=1, Priority=false}
+TreatmentRequest{patientId=2, Priority=false}
+TreatmentRequest{patientId=3, Priority=true}
+TreatmentRequest{patientId=4, Priority=false}
+TreatmentRequest{patientId=5, Priority=false}
+TreatmentRequest{patientId=6, Priority=true}
+TreatmentRequest{patientId=7, Priority=false}
+TreatmentRequest{patientId=8, Priority=false}
+
+Queue after processing 3 requests:
+TreatmentRequest{patientId=4, Priority=false}
+TreatmentRequest{patientId=5, Priority=false}
+TreatmentRequest{patientId=6, Priority=true}
+TreatmentRequest{patientId=7, Priority=false}
+TreatmentRequest{patientId=8, Priority=false}
