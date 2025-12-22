@@ -30,7 +30,4 @@ FEATURES IMPLEMENTED:
 • Process treatment requests (priority and normal). 
 • Sort patients by severity.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ae4b0d9dcc2830b973b92b0f2ddfcd1a8212c68c
