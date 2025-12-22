@@ -14,7 +14,7 @@ public class Patient {
 
     }
 
-    public int getId() {
+    public int getId() { // We call getter method to reach the patient ID.
         return id;
     }
 

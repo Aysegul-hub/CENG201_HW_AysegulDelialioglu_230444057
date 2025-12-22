@@ -14,7 +14,7 @@ public class Task4Test {
         hpSystem.addPatient(new Patient(6, "Tufan", 7, 35));
         hpSystem.addPatient(new Patient(7, "Leyla", 6, 40));
         hpSystem.addPatient(new Patient(8, "Mehmet", 2, 19));
-        hpSystem.addPatient(new Patient(9, "Asya", 10, 50));
+        hpSystem.addPatient(new Patient(9, "Asya", 10, 90));
         hpSystem.addPatient(new Patient(10, "Burak", 1, 26));
 
         hpSystem.addTreatmentRequest(new TreatmentRequest(1,false)); // Adding treatment requests with varying priority.
@@ -27,13 +27,25 @@ public class Task4Test {
         hpSystem.addTreatmentRequest(new TreatmentRequest(8,false));
 
 
+        System.out.println("***** Before Processing Treatments *****");
+
+        hpSystem.printSystemState(); // Print the current state of the hospital system.
+
 
         hpSystem.processTreatment(); // Process 3 treatment requests.
         hpSystem.processTreatment();
         hpSystem.processTreatment();
         hpSystem.processTreatment();
 
+        
+        hpSystem.sortPatientsBySeverity(); // Sort and print patient by severity level.
+        System.out.println();
+
+
+        System.out.println("***** After Processing Treatments *****");
+
         hpSystem.printSystemState(); // Print the current state of the hospital system.
+
         hpSystem.sortPatientsBySeverity(); // Sort and print patient by severity level.
 
 

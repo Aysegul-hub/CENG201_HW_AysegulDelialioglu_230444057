@@ -60,6 +60,7 @@ public class HospitalSystem { // This class manages the hospital system includin
         normalQueue.printQueue();
         System.out.println("\n----- Discharge Stack -----");
         dischargeStack.printStack();
+        
 
     }
 

@@ -6,14 +6,14 @@ public class PatientList {
         Patient data;
         Node next;
 
-        Node(Patient data) {
+        Node(Patient data) { // Constructor
             this.data = data;
             
 
         }
     }
 
-    //This shows the head is null at the beginning.
+    
 
     Node head;
     // We add patient to the end of the list.
@@ -67,7 +67,7 @@ public class PatientList {
         }
     }
     
-    public Patient[] toArray() {
+    public Patient[] toArray() { // Convert the linked list to an array .
         int count = 0;
         Node cur = head;
 

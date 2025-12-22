@@ -58,7 +58,7 @@ public class TreatmentQueue {
 
     }
 
-    public int size() {
+    public int size() { // Return the size of the queue.
         return size;
     }
 

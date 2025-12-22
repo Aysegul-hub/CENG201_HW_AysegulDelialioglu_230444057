@@ -6,7 +6,8 @@ public class Task2Test {
 
         //8 treatment requests
         for ( int i = 1 ; i <= 8 ; i++) { // Patient IDs from 1 to 8
-            queue.enqueue(new TreatmentRequest(5,false));
+            boolean priority = (i % 3 == 0 ); // Every 3rd request is priority.
+            queue.enqueue(new TreatmentRequest(i,priority));
 
         }
 
