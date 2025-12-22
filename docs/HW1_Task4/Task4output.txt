@@ -1,0 +1,68 @@
+***** Before Processing Treatments *****
+
+----- Admitted Patients -----
+Patient { id = 10 , name = Burak,severity = 1, age = 26}
+Patient { id = 9 , name = Asya,severity = 10, age = 90}
+Patient { id = 8 , name = Mehmet,severity = 2, age = 19}
+Patient { id = 7 , name = Leyla,severity = 6, age = 40}
+Patient { id = 6 , name = Tufan,severity = 7, age = 35}
+Patient { id = 5 , name = Seren,severity = 4, age = 28}
+Patient { id = 4 , name = Hakan,severity = 8, age = 60}
+Patient { id = 3 , name = Naz,severity = 3, age = 22}
+Patient { id = 2 , name = Emir,severity = 9, age = 45}
+Patient { id = 1 , name = Ayşe,severity = 5, age = 30}
+
+----- Priority Treatment Queue -----
+TreatmentRequest{patientId=2, Priority=true}
+TreatmentRequest{patientId=4, Priority=true}
+TreatmentRequest{patientId=7, Priority=true}
+
+----- Normal Treatment Queue -----
+TreatmentRequest{patientId=1, Priority=false}
+TreatmentRequest{patientId=3, Priority=false}
+TreatmentRequest{patientId=5, Priority=false}
+TreatmentRequest{patientId=6, Priority=false}
+TreatmentRequest{patientId=8, Priority=false}
+
+----- Discharge Stack -----
+Discharge stack is empty.
+
+-----Patients Sorted by Severity Level -----
+Patient { id = 9 , name = Asya,severity = 10, age = 90}
+Patient { id = 6 , name = Tufan,severity = 7, age = 35}
+Patient { id = 5 , name = Seren,severity = 4, age = 28}
+Patient { id = 3 , name = Naz,severity = 3, age = 22}
+Patient { id = 8 , name = Mehmet,severity = 2, age = 19}
+Patient { id = 10 , name = Burak,severity = 1, age = 26}
+
+***** After Processing Treatments *****
+
+----- Admitted Patients -----
+Patient { id = 10 , name = Burak,severity = 1, age = 26}
+Patient { id = 9 , name = Asya,severity = 10, age = 90}
+Patient { id = 8 , name = Mehmet,severity = 2, age = 19}
+Patient { id = 6 , name = Tufan,severity = 7, age = 35}
+Patient { id = 5 , name = Seren,severity = 4, age = 28}
+Patient { id = 3 , name = Naz,severity = 3, age = 22}
+
+----- Priority Treatment Queue -----
+
+----- Normal Treatment Queue -----
+TreatmentRequest{patientId=3, Priority=false}
+TreatmentRequest{patientId=5, Priority=false}
+TreatmentRequest{patientId=6, Priority=false}
+TreatmentRequest{patientId=8, Priority=false}
+
+----- Discharge Stack -----
+Patient Identifier: 1 ,Discharge Time : 1766387558697
+Patient Identifier: 7 ,Discharge Time : 1766387558697
+Patient Identifier: 4 ,Discharge Time : 1766387558697
+Patient Identifier: 2 ,Discharge Time : 1766387558697
+
+-----Patients Sorted by Severity Level -----
+Patient { id = 9 , name = Asya,severity = 10, age = 90}
+Patient { id = 6 , name = Tufan,severity = 7, age = 35}
+Patient { id = 5 , name = Seren,severity = 4, age = 28}
+Patient { id = 3 , name = Naz,severity = 3, age = 22}
+Patient { id = 8 , name = Mehmet,severity = 2, age = 19}
+Patient { id = 10 , name = Burak,severity = 1, age = 26}
