@@ -46,7 +46,7 @@ public class Task4Test {
 
         hpSystem.printSystemState(); // Print the current state of the hospital system.
 
-        hpSystem.sortPatientsBySeverity(); // Sort and print patient by severity level.
+        hpSystem.sortPatientsBySeverity(); // Sort and print patient by severity level
 
 
     }

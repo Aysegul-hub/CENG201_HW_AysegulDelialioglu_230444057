@@ -1,23 +1,19 @@
+// Patient class
 public class Patient {
-
-    // We explained the attiributes the patients. We use final keyword to make them immutable.
-    public int id;
-    public String name;
-    public int severity;
-    public int age;
+    public int id; // id
+    public String name; // name
+    public int severity; // severity 1-10
+    public int age; // age
 
     public Patient(int id, String name, int severity , int age) {
-        this.id = id;
-        this.name = name;
-        this.severity = severity;
-        this.age = age;
-
+        this.id = id; // set id
+        this.name = name; // set name  
+        this.severity = severity; // set severity
+        this.age = age; // set age
     }
 
-    // We use toString method to print the patient details , this way looks more organized.
-    @Override //Provide a string representation of the patient object.
+    @Override
     public String toString() {
         return "Patient { " + "id = " + id + " , name = " + name + ",severity = " + severity + ", age = " + age + "}";
-
     }
 }

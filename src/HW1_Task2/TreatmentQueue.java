@@ -1,61 +1,49 @@
 
-
 public class TreatmentQueue {
+    private class Node {
+        TreatmentRequest data; // data
+        Node next; // next
 
-    private class Node { //This is a private inner class representing a node in the linked list.
-        TreatmentRequest data;
-        Node next;
-
-        Node(TreatmentRequest data) { //Parameterized constructor.
-            this.data = data ;
-            this.next = null; // Always be null in first
+        Node(TreatmentRequest data) {
+            this.data = data;
+            this.next = null;
         }
     }
 
-    private Node front; // Points to the front of the queue.
-    private Node rear; //Points to the rear of the queue.
-    private int size; 
+    private Node front; // front
+    private Node rear; // rear
+    private int size; // size
 
-    public TreatmentQueue() { //Initialize an empty queue.
-        front = null; 
+    public TreatmentQueue() {
+        front = null;
         rear = null;
         size = 0;
-
     }
 
-    //Enqueue (adding the last)
     public void enqueue(TreatmentRequest request) {
-        Node newNode = new Node(request);
-
-        if(rear == null) { //If the queue is empty
+        Node newNode = new Node(request); // new node
+        if(rear == null) {
             front = newNode;
             rear = newNode;
-
         }
-        else { // Queue is not empty
+        else {
             rear.next = newNode;
             rear = newNode;
-
         }
-        size++; // The size will be increased by 1 after adding a new request.
+        size++;
     }
 
-    //Dequeue ( removing the first)
-
     public TreatmentRequest dequeue() {
-        if ( front == null) { //Empty
+        if ( front == null) {
             return null;
-
         }
-        TreatmentRequest removedRequest = front.data; //Store the data of the front node to return when removed.
+        TreatmentRequest removedRequest = front.data;
         front = front.next;
-
         if ( front == null) {
             rear = null;
         }
         size--;
         return removedRequest;
-
     }
 
     public int size() {
@@ -64,16 +52,13 @@ public class TreatmentQueue {
 
     public void printQueue() {
         Node current = front;
-
-        while (current != null ) { // Traverse through the queue.
+        while (current != null) {
             System.out.println(current.data);
             current = current.next;
-
         }
     }
 
     public boolean isEmpty() {
         return front == null;
     }
-    
 }

@@ -1,89 +1,79 @@
+// PatientList class
 public class PatientList {
-
-    // We create a linked list to store the patients. (Node keeps patient data and pointer to next node)
-
     class Node {
-        Patient data;
-        Node next;
+        Patient data; // patient data
+        Node next; // next node
 
-        Node(Patient data) { // Constructor
-            this.data = data;
-            
-
+        Node(Patient data) {
+            this.data = data; // set data
         }
     }
 
-    
+    Node head; // head node
 
-    Node head;
-    // We add patient to the end of the list.
     public void addPatient(Patient p) {
-        Node n = new Node(p); // Create a new node with the patient data.
-        n.next = head;
-        head = n;
+        Node n = new Node(p); // create node
+        n.next = head; // link
+        head = n; // update head
     }
-    // We remove patient by ID.
+
     public void removePatientById( int id) {
         if(head == null) {
-            return; // That is mean the list is empty.
+            return; // empty
         }
 
         if(head.data.id == id) {
-            head = head.next; // Remove the head node. The head will be next node.
+            head = head.next; // remove head
             return;
         }
 
-        Node cur = head;
+        Node cur = head; // current
         while ( cur.next != null ) {
             if ( cur.next.data.id == id) {
-                cur.next = cur.next.next;
+                cur.next = cur.next.next; // remove
                 return;
             }
-            cur = cur.next;
+            cur = cur.next; // next
         }
     }
+
     public void removePatient(int id) {
-        removePatientById(id);
+        removePatientById(id); // call remove
     }
 
-    //We find patient using ID.
     public Patient findPatientList(int id) {
-        Node cur = head; // Start from the head node.
-
+        Node cur = head; // start
         while ( cur != null) {
             if ( cur.data.id == id) {
-                return cur.data; // Return the patient if found.
+                return cur.data; // found
             }
-            cur = cur.next; // Move the next node.
+            cur = cur.next; // next
         }
-        return null; // Return null if the patient is not found in the list.
+        return null; // not found
     }
 
     public void printList() {
-        Node cur = head;
+        Node cur = head; // current
         while (cur != null) {
-            System.out.println(cur.data);
-            cur = cur.next;
+            System.out.println(cur.data); // print
+            cur = cur.next; // next
         }
     }
-    
-    public Patient[] toArray() { // Convert the linked list to an array .
-        int count = 0;
-        Node cur = head;
 
+    public Patient[] toArray() {
+        int count = 0; // counter
+        Node cur = head;
         while ( cur != null) {
-            count++;
+            count++; // increment
             cur = cur.next;
         }
-
-        Patient[] arr = new Patient[count];
+        Patient[] arr = new Patient[count]; // create array
         cur = head;
         int i = 0;
-
         while (cur != null) {
-            arr[i++] = cur.data;
+            arr[i++] = cur.data; // fill
             cur = cur.next;
         }
-        return arr;
+        return arr; // return
     }
 }

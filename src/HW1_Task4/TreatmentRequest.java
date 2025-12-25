@@ -1,21 +1,17 @@
+// TreatmentRequest class
+public class TreatmentRequest {
+    int patientId; // patient id
+    public long arrivalTime; // arrival time
+    boolean isPriority; // priority
 
-
-public class TreatmentRequest { //This class shows a treatment request by a patient.
-
-    int patientId;// We write final because these values should not be changed after initialization.
-    public long arrivalTime;
-    boolean isPriority;
-
-    public TreatmentRequest(int patientId, boolean isPriority) { //Constructor 
-        this.patientId = patientId;
-        this.isPriority = isPriority;
-        this.arrivalTime = System.currentTimeMillis();
+    public TreatmentRequest(int patientId, boolean isPriority) {
+        this.patientId = patientId; // set id
+        this.isPriority = isPriority; // set priority
+        this.arrivalTime = System.currentTimeMillis(); // set time
     }
 
-    @Override // This is important for clean output when printing the object.
-
-    public String toString() { //Provide a string representation.
-        return "TreatmentRequest{" + "patientId=" + patientId + ", Priority=" + isPriority + '}' ;
+    @Override
+    public String toString() {
+        return "TreatmentRequest{" + "patientId=" + patientId + ", Priority=" + isPriority + '}' ; // return string
     }
-    
 }

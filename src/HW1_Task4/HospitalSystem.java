@@ -77,7 +77,7 @@ public class HospitalSystem { // This class manages the hospital system includin
             }
         }
 
-        System.out.println("\n-----Patients Sorted by Severity Level -----"); // Print sorted patients.
+        System.out.println("\n-----Patients Sorted by Severity Level -----"); // Print sorted patients
         for ( Patient p : arr){
             System.out.println(p);
         }
