@@ -23,6 +23,7 @@
 
 ## 🎯 Overview
 
+<<<<<<< HEAD
 This project is a Java application that simulates a hospital management system. The project uses different data structures (linked list, queue, stack) to manage patients, treatment queues, and discharge operations.
 
 ### Key Features:
@@ -428,3 +429,6 @@ This project is for educational purposes and was prepared as part of the CENG201
 ---
 
 **Last Updated:** December 27, 2025
+=======
+
+>>>>>>> b9800b4c6b459e0ff074fdf7a0d64952fdf635bf
